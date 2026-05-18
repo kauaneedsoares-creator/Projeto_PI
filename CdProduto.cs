@@ -24,13 +24,13 @@ namespace ProjetoCapeCode
         }
         private void LimparElementos()
         {
-            btnNomeFuncionario.Text = "";
-            txtCPF.Text = "";
-            txtEmail.Text = "";
-            txtSenha.Text = "";
-            cboCargo.Text = "";
-            cboGenero.Text = "";
-            cxoAtivo.Text = " ";
+            txtNomeProduto.Text = "";
+            txtValor.Text = "";
+            txtQuantidade.Text = "";
+            txtTamanho.Text = "";
+            txtCor.Text = "";
+            txtDescricao.Text = "";
+          
 
         }
 
@@ -39,16 +39,14 @@ namespace ProjetoCapeCode
             // Verifica se o botão está no modo "Cadastrar"
             if (btnAjustess.Text == "Cadastrar")
             {
-                string nome = btnNomeFuncionario.Text;
-                string cpf = txtCPF.Text;
-                string email = txtEmail.Text;
-                string senha = txtSenha.Text;
-                string cargo = cboCargo.Text;
-                string genero = cboGenero.Text;
-                string status_funcionario = cxoAtivo.Checked.ToString();
-                DateTime DataCadastro = Convert.ToDateTime(txtdata.Text);
-                FUNCIONARIOSTableAdapter funcionario = new FUNCIONARIOSTableAdapter();
-                funcionario.Insert(nome, email, senha, cpf, cargo, status_funcionario, DataCadastro, genero);
+                string nome = txtNomeProduto.Text;
+                string valor = Convert.ToString( txtValor.Text);
+                string quantidade = txtQuantidade.Text;
+                string tamanho = txtTamanho.Text;
+                string cor = txtCor.Text;
+                string descricao = txtDescricao.Text;
+                 PRODUTOSTableAdapter produtos = new PRODUTOSTableAdapter();
+                produtos.Insert(nome, descricao, valor, quantidade, tamanho, cor);
                 LimparElementos();
                 AtualizarLista();
 
