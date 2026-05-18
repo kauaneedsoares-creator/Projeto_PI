@@ -41,7 +41,7 @@
             this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cboTransportadora = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataEnvio = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.txtPedido = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.btnAtualizar.TabIndex = 17;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnLimpar
             // 
@@ -73,6 +74,7 @@
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnRegistrar
             // 
@@ -85,6 +87,7 @@
             this.btnRegistrar.TabIndex = 15;
             this.btnRegistrar.Text = "Registrar envio";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // cboCodigoRastreio
             // 
@@ -182,12 +185,13 @@
             this.cboTransportadora.Size = new System.Drawing.Size(231, 21);
             this.cboTransportadora.TabIndex = 147;
             // 
-            // dateTimePicker1
+            // dtpDataEnvio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(23, 279);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(231, 20);
-            this.dateTimePicker1.TabIndex = 148;
+            this.dtpDataEnvio.Location = new System.Drawing.Point(23, 279);
+            this.dtpDataEnvio.Name = "dtpDataEnvio";
+            this.dtpDataEnvio.Size = new System.Drawing.Size(231, 20);
+            this.dtpDataEnvio.TabIndex = 148;
+            this.dtpDataEnvio.Tag = "";
             // 
             // label7
             // 
@@ -247,7 +251,7 @@
             this.Controls.Add(this.txtPedido);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cboStatus);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDataEnvio);
             this.Controls.Add(this.cboTransportadora);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboFuncionario);
@@ -284,7 +288,7 @@
         private System.Windows.Forms.ComboBox cboFuncionario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboTransportadora;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDataEnvio;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.TextBox txtPedido;

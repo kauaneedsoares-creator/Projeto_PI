@@ -40,8 +40,8 @@ namespace ProjetoCapeCode
             if (btnAjustess.Text == "Cadastrar")
             {
                 string nome = txtNomeProduto.Text;
-                string valor = Convert.ToString( txtValor.Text);
-                string quantidade = txtQuantidade.Text;
+                decimal valor = Convert.ToDecimal(txtValor.Text);
+                int quantidade = Convert.ToInt32(txtQuantidade.Text);
                 string tamanho = txtTamanho.Text;
                 string cor = txtCor.Text;
                 string descricao = txtDescricao.Text;
@@ -61,18 +61,16 @@ namespace ProjetoCapeCode
                     lboProduto.ClearSelected();
                     return;
                 }
-                FUNCIONARIOSRow funcionario = lboProduto.SelectedItem as FUNCIONARIOSRow;
-                if (funcionario == null) return;
-                funcionario.nome = btnNomeFuncionario.Text;
-                funcionario.cpf = txtCPF.Text;
-                funcionario.email = txtEmail.Text;
-                funcionario.senha = txtSenha.Text;
-                funcionario.cargo = cboCargo.Text;
-                funcionario.Genero = cboGenero.Text;
-                funcionario.status_funcionario = cxoAtivo.Checked.ToString();
-
-                FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
-                funcionario.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.cpf, funcionario.email, funcionario.senha, funcionario.cargo, funcionario.Genero, funcionario.status_funcionario);
+                PRODUTOSRow produto = lboProduto.SelectedItem as PRODUTOSRow;
+                if (produto == null) return;
+                produto.nome = txtNomeProduto.Text;
+                produto.valor = Convert.ToDecimal(txtValor.Text);
+                produto.quantidade = Convert.ToInt32(txtQuantidade.Text);
+                produto.cor = txtCor.Text;
+                produto.descricao = txtDescricao.Text;
+            
+                PRODUTOSTableAdapter produtos = new PRODUTOSTableAdapter();
+                produto.Update(produto.ID_Produto, produto.nome, produto.descricao, produto.valor, produto.quantidade, produto.tamanho, produto.cor);
                 // Volta os botões para o estado padrão
                 btnAcoes.Text = "Cadastrar";
                 btnAjustess.Text = "Atulizar Lista";
@@ -86,11 +84,11 @@ namespace ProjetoCapeCode
             if (btnAcoes.Text == "Excluir") // Só faz alguma coisa se o texto do botão for "Excluir"
             {
                 if (lboProduto.SelectedItem == null) return;
-                FUNCIONARIOSRow funcionario = lboProduto.SelectedItem as FUNCIONARIOSRow;
+                PRODUTOSRow funcionario = lboProduto.SelectedItem as PRODUTOSRow;
                 if (funcionario == null) return;
                 // Conecta com o banco de dados e apaga o usuarios usando o ID dele
-                FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
-                funcionarios.Delete(funcionario.ID_Funcionario);
+                PRODUTOSTableAdapter funcionarios = new PRODUTOSTableAdapter();
+                funcionarios.Delete(funcionario.ID_Produto);
 
                 LimparElementos();
                 AtualizarLista();
