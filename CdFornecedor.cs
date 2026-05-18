@@ -21,5 +21,10 @@ namespace ProjetoCapeCode
         {
         
         }
+
+        private void btnCadrastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

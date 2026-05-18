@@ -102,6 +102,7 @@
             this.btnCadrastro.TabIndex = 15;
             this.btnCadrastro.Text = "Cadastrar Fornecedor";
             this.btnCadrastro.UseVisualStyleBackColor = false;
+            this.btnCadrastro.Click += new System.EventHandler(this.btnCadrastro_Click);
             // 
             // txtEndereco
             // 

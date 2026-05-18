@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEditar8 = new System.Windows.Forms.Button();
-            this.bntCadatro8 = new System.Windows.Forms.Button();
-            this.bntLLimpar8 = new System.Windows.Forms.Button();
-            this.rbGerente = new System.Windows.Forms.RadioButton();
-            this.rbFuncionario = new System.Windows.Forms.RadioButton();
+            this.btnAcoes = new System.Windows.Forms.Button();
+            this.btnAjustess = new System.Windows.Forms.Button();
+            this.bntLimpar = new System.Windows.Forms.Button();
             this.lblCPFFuncionarios = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
             this.btnNomeFuncionario = new System.Windows.Forms.TextBox();
             this.lblNomeFuncionarios = new System.Windows.Forms.Label();
-            this.btnSenha2 = new System.Windows.Forms.TextBox();
-            this.btnEmail2 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblSenhauncionarios = new System.Windows.Forms.Label();
             this.lblEmailFuncionarios = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,70 +45,51 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cxoAtivo = new System.Windows.Forms.CheckBox();
             this.lboFuncionarios = new System.Windows.Forms.ListBox();
-            this.btnVolta = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboGenero = new System.Windows.Forms.ComboBox();
+            this.txtdata = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnEditar8
+            // btnAcoes
             // 
-            this.btnEditar8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnEditar8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar8.ForeColor = System.Drawing.Color.White;
-            this.btnEditar8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar8.Location = new System.Drawing.Point(202, 466);
-            this.btnEditar8.Name = "btnEditar8";
-            this.btnEditar8.Size = new System.Drawing.Size(131, 44);
-            this.btnEditar8.TabIndex = 133;
-            this.btnEditar8.Text = "Editar";
-            this.btnEditar8.UseVisualStyleBackColor = false;
+            this.btnAcoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcoes.ForeColor = System.Drawing.Color.White;
+            this.btnAcoes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAcoes.Location = new System.Drawing.Point(202, 466);
+            this.btnAcoes.Name = "btnAcoes";
+            this.btnAcoes.Size = new System.Drawing.Size(131, 44);
+            this.btnAcoes.TabIndex = 133;
+            this.btnAcoes.Text = "Editar";
+            this.btnAcoes.UseVisualStyleBackColor = false;
+            this.btnAcoes.Click += new System.EventHandler(this.btnAcoes_Click);
             // 
-            // bntCadatro8
+            // btnAjustess
             // 
-            this.bntCadatro8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.bntCadatro8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntCadatro8.ForeColor = System.Drawing.Color.White;
-            this.bntCadatro8.Location = new System.Drawing.Point(43, 466);
-            this.bntCadatro8.Name = "bntCadatro8";
-            this.bntCadatro8.Size = new System.Drawing.Size(131, 44);
-            this.bntCadatro8.TabIndex = 132;
-            this.bntCadatro8.Text = "Cadastro";
-            this.bntCadatro8.UseVisualStyleBackColor = false;
+            this.btnAjustess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnAjustess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustess.ForeColor = System.Drawing.Color.White;
+            this.btnAjustess.Location = new System.Drawing.Point(43, 466);
+            this.btnAjustess.Name = "btnAjustess";
+            this.btnAjustess.Size = new System.Drawing.Size(131, 44);
+            this.btnAjustess.TabIndex = 132;
+            this.btnAjustess.Text = "Cadastro";
+            this.btnAjustess.UseVisualStyleBackColor = false;
+            this.btnAjustess.Click += new System.EventHandler(this.btnAjustess_Click);
             // 
-            // bntLLimpar8
+            // bntLimpar
             // 
-            this.bntLLimpar8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.bntLLimpar8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntLLimpar8.ForeColor = System.Drawing.Color.White;
-            this.bntLLimpar8.Location = new System.Drawing.Point(370, 466);
-            this.bntLLimpar8.Name = "bntLLimpar8";
-            this.bntLLimpar8.Size = new System.Drawing.Size(131, 44);
-            this.bntLLimpar8.TabIndex = 131;
-            this.bntLLimpar8.Text = "Limpar";
-            this.bntLLimpar8.UseVisualStyleBackColor = false;
-            // 
-            // rbGerente
-            // 
-            this.rbGerente.AutoSize = true;
-            this.rbGerente.ForeColor = System.Drawing.Color.White;
-            this.rbGerente.Location = new System.Drawing.Point(481, 124);
-            this.rbGerente.Name = "rbGerente";
-            this.rbGerente.Size = new System.Drawing.Size(63, 17);
-            this.rbGerente.TabIndex = 129;
-            this.rbGerente.TabStop = true;
-            this.rbGerente.Text = "Gerente";
-            this.rbGerente.UseVisualStyleBackColor = true;
-            // 
-            // rbFuncionario
-            // 
-            this.rbFuncionario.AutoSize = true;
-            this.rbFuncionario.ForeColor = System.Drawing.Color.White;
-            this.rbFuncionario.Location = new System.Drawing.Point(312, 124);
-            this.rbFuncionario.Name = "rbFuncionario";
-            this.rbFuncionario.Size = new System.Drawing.Size(80, 17);
-            this.rbFuncionario.TabIndex = 128;
-            this.rbFuncionario.TabStop = true;
-            this.rbFuncionario.Text = "Funcionario";
-            this.rbFuncionario.UseVisualStyleBackColor = true;
+            this.bntLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.bntLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntLimpar.ForeColor = System.Drawing.Color.White;
+            this.bntLimpar.Location = new System.Drawing.Point(370, 466);
+            this.bntLimpar.Name = "bntLimpar";
+            this.bntLimpar.Size = new System.Drawing.Size(131, 44);
+            this.bntLimpar.TabIndex = 131;
+            this.bntLimpar.Text = "Limpar";
+            this.bntLimpar.UseVisualStyleBackColor = false;
+            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
             // lblCPFFuncionarios
             // 
@@ -124,15 +103,15 @@
             this.lblCPFFuncionarios.TabIndex = 126;
             this.lblCPFFuncionarios.Text = "CPF";
             // 
-            // textBox1
+            // txtCPF
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 17);
-            this.textBox1.TabIndex = 125;
+            this.txtCPF.BackColor = System.Drawing.Color.White;
+            this.txtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Location = new System.Drawing.Point(24, 138);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(179, 17);
+            this.txtCPF.TabIndex = 125;
             // 
             // btnNomeFuncionario
             // 
@@ -157,25 +136,25 @@
             this.lblNomeFuncionarios.TabIndex = 123;
             this.lblNomeFuncionarios.Text = "Nome";
             // 
-            // btnSenha2
+            // txtSenha
             // 
-            this.btnSenha2.BackColor = System.Drawing.Color.White;
-            this.btnSenha2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.btnSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSenha2.Location = new System.Drawing.Point(24, 240);
-            this.btnSenha2.Name = "btnSenha2";
-            this.btnSenha2.Size = new System.Drawing.Size(179, 17);
-            this.btnSenha2.TabIndex = 122;
+            this.txtSenha.BackColor = System.Drawing.Color.White;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(24, 240);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(179, 17);
+            this.txtSenha.TabIndex = 122;
             // 
-            // btnEmail2
+            // txtEmail
             // 
-            this.btnEmail2.BackColor = System.Drawing.Color.White;
-            this.btnEmail2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.btnEmail2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmail2.Location = new System.Drawing.Point(24, 189);
-            this.btnEmail2.Name = "btnEmail2";
-            this.btnEmail2.Size = new System.Drawing.Size(179, 17);
-            this.btnEmail2.TabIndex = 121;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(24, 189);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(179, 17);
+            this.txtEmail.TabIndex = 121;
             // 
             // lblSenhauncionarios
             // 
@@ -247,7 +226,7 @@
             this.cxoAtivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cxoAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cxoAtivo.ForeColor = System.Drawing.Color.White;
-            this.cxoAtivo.Location = new System.Drawing.Point(24, 333);
+            this.cxoAtivo.Location = new System.Drawing.Point(25, 381);
             this.cxoAtivo.Name = "cxoAtivo";
             this.cxoAtivo.Size = new System.Drawing.Size(94, 35);
             this.cxoAtivo.TabIndex = 140;
@@ -262,41 +241,57 @@
             this.lboFuncionarios.Size = new System.Drawing.Size(232, 264);
             this.lboFuncionarios.TabIndex = 141;
             // 
-            // btnVolta
+            // label3
             // 
-            this.btnVolta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnVolta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolta.ForeColor = System.Drawing.Color.White;
-            this.btnVolta.Location = new System.Drawing.Point(483, 67);
-            this.btnVolta.Name = "btnVolta";
-            this.btnVolta.Size = new System.Drawing.Size(78, 44);
-            this.btnVolta.TabIndex = 142;
-            this.btnVolta.Text = "Volta";
-            this.btnVolta.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(21, 338);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 144;
+            this.label3.Text = "Genero";
+            // 
+            // cboGenero
+            // 
+            this.cboGenero.FormattingEnabled = true;
+            this.cboGenero.Location = new System.Drawing.Point(24, 354);
+            this.cboGenero.Name = "cboGenero";
+            this.cboGenero.Size = new System.Drawing.Size(179, 21);
+            this.cboGenero.TabIndex = 143;
+            // 
+            // txtdata
+            // 
+            this.txtdata.BackColor = System.Drawing.Color.White;
+            this.txtdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdata.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdata.Location = new System.Drawing.Point(343, 122);
+            this.txtdata.Name = "txtdata";
+            this.txtdata.Size = new System.Drawing.Size(179, 17);
+            this.txtdata.TabIndex = 145;
             // 
             // CdFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
-            this.Controls.Add(this.btnVolta);
+            this.Controls.Add(this.txtdata);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboGenero);
             this.Controls.Add(this.lboFuncionarios);
             this.Controls.Add(this.cxoAtivo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnEditar8);
-            this.Controls.Add(this.bntCadatro8);
-            this.Controls.Add(this.bntLLimpar8);
-            this.Controls.Add(this.rbGerente);
-            this.Controls.Add(this.rbFuncionario);
+            this.Controls.Add(this.btnAcoes);
+            this.Controls.Add(this.btnAjustess);
+            this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.lblCPFFuncionarios);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.btnNomeFuncionario);
             this.Controls.Add(this.lblNomeFuncionarios);
-            this.Controls.Add(this.btnSenha2);
-            this.Controls.Add(this.btnEmail2);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblSenhauncionarios);
             this.Controls.Add(this.lblEmailFuncionarios);
             this.Name = "CdFuncionarios";
@@ -308,17 +303,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnEditar8;
-        private System.Windows.Forms.Button bntCadatro8;
-        private System.Windows.Forms.Button bntLLimpar8;
-        private System.Windows.Forms.RadioButton rbGerente;
-        private System.Windows.Forms.RadioButton rbFuncionario;
+        private System.Windows.Forms.Button btnAcoes;
+        private System.Windows.Forms.Button btnAjustess;
+        private System.Windows.Forms.Button bntLimpar;
         private System.Windows.Forms.Label lblCPFFuncionarios;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.TextBox btnNomeFuncionario;
         private System.Windows.Forms.Label lblNomeFuncionarios;
-        private System.Windows.Forms.TextBox btnSenha2;
-        private System.Windows.Forms.TextBox btnEmail2;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblSenhauncionarios;
         private System.Windows.Forms.Label lblEmailFuncionarios;
         private System.Windows.Forms.Label label1;
@@ -327,6 +320,8 @@
         private System.Windows.Forms.CheckBox cxoAtivo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox lboFuncionarios;
-        private System.Windows.Forms.Button btnVolta;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboGenero;
+        private System.Windows.Forms.TextBox txtdata;
     }
 }
