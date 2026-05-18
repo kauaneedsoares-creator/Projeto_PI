@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnAcoes = new System.Windows.Forms.Button();
-            this.btnAjustess = new System.Windows.Forms.Button();
+            this.btnCadastro = new System.Windows.Forms.Button();
             this.bntLimpar = new System.Windows.Forms.Button();
             this.lblCPFFuncionarios = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.TextBox();
@@ -65,18 +65,18 @@
             this.btnAcoes.UseVisualStyleBackColor = false;
             this.btnAcoes.Click += new System.EventHandler(this.btnAcoes_Click);
             // 
-            // btnAjustess
+            // btnCadastro
             // 
-            this.btnAjustess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnAjustess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustess.ForeColor = System.Drawing.Color.White;
-            this.btnAjustess.Location = new System.Drawing.Point(43, 466);
-            this.btnAjustess.Name = "btnAjustess";
-            this.btnAjustess.Size = new System.Drawing.Size(131, 44);
-            this.btnAjustess.TabIndex = 132;
-            this.btnAjustess.Text = "Cadastro";
-            this.btnAjustess.UseVisualStyleBackColor = false;
-            this.btnAjustess.Click += new System.EventHandler(this.btnAjustess_Click);
+            this.btnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.ForeColor = System.Drawing.Color.White;
+            this.btnCadastro.Location = new System.Drawing.Point(43, 466);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(131, 44);
+            this.btnCadastro.TabIndex = 132;
+            this.btnCadastro.Text = "Cadastro";
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnAjustess_Click);
             // 
             // bntLimpar
             // 
@@ -284,7 +284,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAcoes);
-            this.Controls.Add(this.btnAjustess);
+            this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.lblCPFFuncionarios);
             this.Controls.Add(this.txtCPF);
@@ -304,7 +304,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnAcoes;
-        private System.Windows.Forms.Button btnAjustess;
+        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button bntLimpar;
         private System.Windows.Forms.Label lblCPFFuncionarios;
         private System.Windows.Forms.TextBox txtCPF;

@@ -36,9 +36,6 @@ namespace ProjetoCapeCode
 
         private void btnAjustess_Click(object sender, EventArgs e)
         {
-            // Verifica se o botão está no modo "Cadastrar"
-            if (btnAjustess.Text == "Cadastrar")
-            {
                 string nome = btnNomeFuncionario.Text;
                 string cpf = txtCPF.Text;
                 string email = txtEmail.Text;
@@ -46,64 +43,28 @@ namespace ProjetoCapeCode
                 string cargo = cboCargo.Text;
                 string genero = cboGenero.Text;
                 string status_funcionario = cxoAtivo.Checked.ToString();
-                DateTime DataCadastro = Convert.ToDateTime(txtdata.Text);
                 FUNCIONARIOSTableAdapter funcionario = new FUNCIONARIOSTableAdapter();
-                funcionario.Insert(nome, email, senha, cpf, cargo, status_funcionario, DataCadastro, genero);
+                funcionario.Insert(nome, email, senha, cpf, cargo, status_funcionario, genero);
                 LimparElementos();
                 AtualizarLista();
 
-
-            }
-            // Caso não seja cadastro, então é atualização
-            else
-            {
-                if (lboFuncionarios.SelectedItem == null)
-                {
-                    LimparElementos();
-                    lboFuncionarios.ClearSelected();
-                    return;
-                }
-                FUNCIONARIOSRow funcionario = lboFuncionarios.SelectedItem as FUNCIONARIOSRow;
-                if (funcionario == null) return;
-                funcionario.nome = btnNomeFuncionario.Text;
-                funcionario.cpf = txtCPF.Text;
-                funcionario.email = txtEmail.Text;
-                funcionario.senha = txtSenha.Text;
-                funcionario.cargo = cboCargo.Text;
-                funcionario.Genero = cboGenero.Text;
-                funcionario.status_funcionario = cxoAtivo.Checked.ToString();
-
-                FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
-                funcionario.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.cpf, funcionario.email, funcionario.senha, funcionario.cargo, funcionario.Genero, funcionario.status_funcionario);
-                // Volta os botões para o estado padrão
-                btnAcoes.Text = "Cadastrar";
-                btnAjustess.Text = "Atulizar Lista";
-                LimparElementos();
-
-            }
         }
 
         private void btnAcoes_Click(object sender, EventArgs e)
         {
-            if (btnAcoes.Text == "Excluir") // Só faz alguma coisa se o texto do botão for "Excluir"
-            {
-                if (lboFuncionarios.SelectedItem == null) return;
-                FUNCIONARIOSRow funcionario = lboFuncionarios.SelectedItem as FUNCIONARIOSRow;
-                if (funcionario == null) return;
-                // Conecta com o banco de dados e apaga o usuarios usando o ID dele
-                FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
-                funcionarios.Delete(funcionario.ID_Funcionario);
+            FUNCIONARIOSRow funcionario = lboFuncionarios.SelectedItem as FUNCIONARIOSRow;
+            if (funcionario == null) return;
+            funcionario.nome = btnNomeFuncionario.Text;
+            funcionario.cpf = txtCPF.Text;
+            funcionario.email = txtEmail.Text;
+            funcionario.senha = txtSenha.Text;
+            funcionario.cargo = cboCargo.Text;
+            funcionario.Genero = cboGenero.Text;
+            funcionario.status_funcionario = cxoAtivo.Checked.ToString();
 
-                LimparElementos();
-                AtualizarLista();
-
-
-                // Volta os botões para o estado normal (Cadastrar e Atualizar Lista)
-                btnAcoes.Text = "Atulizar Lista";
-                btnAjustess.Text = "Cadastrar";
-
-
-            }
+            FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
+            funcionario.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.cpf, funcionario.email, funcionario.senha, funcionario.cargo, funcionario.Genero, 
+                funcionario.status_funcionario);
         }
 
         private void bntLimpar_Click(object sender, EventArgs e)
