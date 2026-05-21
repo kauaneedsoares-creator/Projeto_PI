@@ -246,6 +246,7 @@
             this.tcControle.SelectedIndex = 0;
             this.tcControle.Size = new System.Drawing.Size(572, 563);
             this.tcControle.TabIndex = 1;
+            this.tcControle.SelectedIndexChanged += new System.EventHandler(this.tcControle_SelectedIndexChanged);
             // 
             // tpInicio
             // 
@@ -460,6 +461,7 @@
             this.Controls.Add(this.tcControle);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tcControle.ResumeLayout(false);
             this.tpInicio.ResumeLayout(false);
             this.tpInicio.PerformLayout();

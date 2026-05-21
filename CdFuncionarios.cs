@@ -17,6 +17,10 @@ namespace ProjetoCapeCode
         public CdFuncionarios()
         {
             InitializeComponent();
+            FUNCIONARIOSTableAdapter FuncionarioDados = new FUNCIONARIOSTableAdapter();
+            var dados = from linha in FuncionarioDados.GetData()
+                        select linha;
+            foreach (FUNCIONARIOSRow dado in dados) lboFuncionarios.Items.Add(dado);
         }
         private void AtualizarLista()
         {
@@ -36,17 +40,18 @@ namespace ProjetoCapeCode
 
         private void btnAjustess_Click(object sender, EventArgs e)
         {
-                string nome = btnNomeFuncionario.Text;
-                string cpf = txtCPF.Text;
-                string email = txtEmail.Text;
-                string senha = txtSenha.Text;
-                string cargo = cboCargo.Text;
-                string genero = cboGenero.Text;
-                string status_funcionario = cxoAtivo.Checked.ToString();
-                FUNCIONARIOSTableAdapter funcionario = new FUNCIONARIOSTableAdapter();
-                funcionario.Insert(nome, email, senha, cpf, cargo, status_funcionario, genero);
-                LimparElementos();
-                AtualizarLista();
+
+            string nome = btnNomeFuncionario.Text;
+            string cpf = txtCPF.Text;
+            string email = txtEmail.Text;
+            string senha = txtSenha.Text;
+            string cargo = cboCargo.Text;
+            string genero = cboGenero.Text;
+            string status_funcionario = cxoAtivo.Checked.ToString();
+            FUNCIONARIOSTableAdapter funcionario = new FUNCIONARIOSTableAdapter();
+            funcionario.Insert(nome, email, senha, cpf, cargo, status_funcionario, genero); 
+            LimparElementos();
+            AtualizarLista();
 
         }
 
@@ -63,8 +68,8 @@ namespace ProjetoCapeCode
             funcionario.status_funcionario = cxoAtivo.Checked.ToString();
 
             FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
-            funcionario.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.cpf, funcionario.email, funcionario.senha, funcionario.cargo, funcionario.Genero, 
-                funcionario.status_funcionario);
+            funcionarios.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.cpf, funcionario.email, funcionario.senha, funcionario.cargo, funcionario.Genero, funcionario.status_funcionario);
+
         }
 
         private void bntLimpar_Click(object sender, EventArgs e)

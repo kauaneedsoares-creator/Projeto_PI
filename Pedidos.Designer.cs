@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEditar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.txtEndereço = new System.Windows.Forms.TextBox();
             this.txtProtudos = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
@@ -48,17 +48,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtEditar
+            // btnEditar
             // 
-            this.txtEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.txtEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtEditar.ForeColor = System.Drawing.Color.White;
-            this.txtEditar.Location = new System.Drawing.Point(402, 293);
-            this.txtEditar.Name = "txtEditar";
-            this.txtEditar.Size = new System.Drawing.Size(134, 31);
-            this.txtEditar.TabIndex = 15;
-            this.txtEditar.Text = "Editar";
-            this.txtEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(402, 293);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(134, 31);
+            this.btnEditar.TabIndex = 15;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtEndereço
             // 
@@ -224,7 +225,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtEditar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.txtProtudos);
             this.Controls.Add(this.txtCPF);
@@ -238,7 +239,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button txtEditar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txtEndereço;
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.TextBox txtCliente;

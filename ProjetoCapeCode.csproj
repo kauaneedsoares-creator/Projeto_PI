@@ -85,6 +85,12 @@
     <Compile Include="CdFuncionarios.Designer.cs">
       <DependentUpon>CdFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedidos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +98,9 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Projeto_IntegradorDataSet.cs">
+      <DependentUpon>Projeto_IntegradorDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Projeto_IntegradorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

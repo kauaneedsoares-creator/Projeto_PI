@@ -46,6 +46,10 @@
             this.btnAjustess = new System.Windows.Forms.Button();
             this.bntLLimpar = new System.Windows.Forms.Button();
             this.lboProduto = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAltura = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,10 +91,10 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(26, 361);
+            this.txtDescricao.Location = new System.Drawing.Point(26, 425);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(483, 89);
+            this.txtDescricao.Size = new System.Drawing.Size(145, 24);
             this.txtDescricao.TabIndex = 7;
             // 
             // label2
@@ -117,7 +121,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 345);
+            this.label4.Location = new System.Drawing.Point(30, 409);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 13;
@@ -127,7 +131,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(23, 295);
+            this.label5.Location = new System.Drawing.Point(23, 283);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 20;
@@ -137,7 +141,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 247);
+            this.label6.Location = new System.Drawing.Point(23, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 19;
@@ -147,7 +151,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(23, 196);
+            this.label7.Location = new System.Drawing.Point(23, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 13);
             this.label7.TabIndex = 18;
@@ -155,21 +159,21 @@
             // 
             // txtCor
             // 
-            this.txtCor.Location = new System.Drawing.Point(26, 311);
+            this.txtCor.Location = new System.Drawing.Point(26, 297);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(100, 20);
             this.txtCor.TabIndex = 17;
             // 
             // txtTamanho
             // 
-            this.txtTamanho.Location = new System.Drawing.Point(26, 263);
+            this.txtTamanho.Location = new System.Drawing.Point(26, 251);
             this.txtTamanho.Name = "txtTamanho";
             this.txtTamanho.Size = new System.Drawing.Size(100, 20);
             this.txtTamanho.TabIndex = 16;
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.Location = new System.Drawing.Point(26, 212);
+            this.txtQuantidade.Location = new System.Drawing.Point(26, 200);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
             this.txtQuantidade.TabIndex = 15;
@@ -217,16 +221,54 @@
             // lboProduto
             // 
             this.lboProduto.FormattingEnabled = true;
-            this.lboProduto.Location = new System.Drawing.Point(308, 107);
+            this.lboProduto.Location = new System.Drawing.Point(314, 91);
             this.lboProduto.Name = "lboProduto";
             this.lboProduto.Size = new System.Drawing.Size(232, 238);
             this.lboProduto.TabIndex = 142;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(23, 365);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 146;
+            this.label8.Text = "Altura";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(23, 322);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 145;
+            this.label9.Text = "Peso";
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.Location = new System.Drawing.Point(26, 381);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(100, 20);
+            this.txtAltura.TabIndex = 144;
+            // 
+            // txtPeso
+            // 
+            this.txtPeso.Location = new System.Drawing.Point(26, 338);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(100, 20);
+            this.txtPeso.TabIndex = 143;
             // 
             // CdProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.lboProduto);
             this.Controls.Add(this.btnAcoes);
             this.Controls.Add(this.btnAjustess);
@@ -273,5 +315,9 @@
         private System.Windows.Forms.Button btnAjustess;
         private System.Windows.Forms.Button bntLLimpar;
         private System.Windows.Forms.ListBox lboProduto;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtAltura;
+        private System.Windows.Forms.TextBox txtPeso;
     }
 }

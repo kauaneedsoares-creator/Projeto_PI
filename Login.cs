@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoCapeCode
 {
-    public partial class Pedidos : UserControl
+    public partial class Login : Form
     {
-        public Pedidos()
+        public Login()
         {
             InitializeComponent();
-        }
-
-        private void btnVolta_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
