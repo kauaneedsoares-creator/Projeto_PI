@@ -32,13 +32,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboTamanho = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cboCor = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cboProdutos = new System.Windows.Forms.ComboBox();
             this.lboEstoque = new System.Windows.Forms.ListBox();
-            this.btnVolta = new System.Windows.Forms.Button();
+            this.btnQtd = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,64 +77,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 127);
+            this.label2.Location = new System.Drawing.Point(14, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 19;
             this.label2.Text = "Os produtos ";
             // 
-            // label3
+            // cboProdutos
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(20, 188);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Tamanho";
-            // 
-            // cboTamanho
-            // 
-            this.cboTamanho.FormattingEnabled = true;
-            this.cboTamanho.Items.AddRange(new object[] {
+            this.cboProdutos.FormattingEnabled = true;
+            this.cboProdutos.Items.AddRange(new object[] {
             "entrada",
             "saída"});
-            this.cboTamanho.Location = new System.Drawing.Point(23, 204);
-            this.cboTamanho.Name = "cboTamanho";
-            this.cboTamanho.Size = new System.Drawing.Size(121, 21);
-            this.cboTamanho.TabIndex = 23;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "entrada",
-            "saída"});
-            this.comboBox1.Location = new System.Drawing.Point(23, 143);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(503, 21);
-            this.comboBox1.TabIndex = 24;
-            // 
-            // cboCor
-            // 
-            this.cboCor.FormattingEnabled = true;
-            this.cboCor.Items.AddRange(new object[] {
-            "entrada",
-            "saída"});
-            this.cboCor.Location = new System.Drawing.Point(405, 204);
-            this.cboCor.Name = "cboCor";
-            this.cboCor.Size = new System.Drawing.Size(121, 21);
-            this.cboCor.TabIndex = 25;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(402, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Cor";
+            this.cboProdutos.Location = new System.Drawing.Point(17, 135);
+            this.cboProdutos.Name = "cboProdutos";
+            this.cboProdutos.Size = new System.Drawing.Size(503, 21);
+            this.cboProdutos.TabIndex = 24;
             // 
             // lboEstoque
             // 
@@ -147,31 +102,41 @@
             this.lboEstoque.Name = "lboEstoque";
             this.lboEstoque.Size = new System.Drawing.Size(564, 212);
             this.lboEstoque.TabIndex = 27;
+            this.lboEstoque.SelectedIndexChanged += new System.EventHandler(this.lboEstoque_SelectedIndexChanged);
             // 
-            // btnVolta
+            // btnQtd
             // 
-            this.btnVolta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnVolta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolta.ForeColor = System.Drawing.Color.White;
-            this.btnVolta.Location = new System.Drawing.Point(486, 72);
-            this.btnVolta.Name = "btnVolta";
-            this.btnVolta.Size = new System.Drawing.Size(78, 44);
-            this.btnVolta.TabIndex = 28;
-            this.btnVolta.Text = "Volta";
-            this.btnVolta.UseVisualStyleBackColor = false;
+            this.btnQtd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnQtd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQtd.ForeColor = System.Drawing.Color.White;
+            this.btnQtd.Location = new System.Drawing.Point(187, 285);
+            this.btnQtd.Name = "btnQtd";
+            this.btnQtd.Size = new System.Drawing.Size(181, 31);
+            this.btnQtd.TabIndex = 28;
+            this.btnQtd.Text = "Aumentar Qtd";
+            this.btnQtd.UseVisualStyleBackColor = false;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.ForeColor = System.Drawing.Color.White;
+            this.btnDeletar.Location = new System.Drawing.Point(505, 72);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(59, 31);
+            this.btnDeletar.TabIndex = 29;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = false;
             // 
             // EsControleEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
-            this.Controls.Add(this.btnVolta);
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnQtd);
             this.Controls.Add(this.lboEstoque);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cboCor);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cboTamanho);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboProdutos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.label1);
@@ -190,12 +155,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboTamanho;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cboCor;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboProdutos;
         private System.Windows.Forms.ListBox lboEstoque;
-        private System.Windows.Forms.Button btnVolta;
+        private System.Windows.Forms.Button btnQtd;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }
