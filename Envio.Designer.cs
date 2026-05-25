@@ -370,8 +370,9 @@
             // 
             this.dtpDataEnvio.Location = new System.Drawing.Point(189, 67);
             this.dtpDataEnvio.Name = "dtpDataEnvio";
-            this.dtpDataEnvio.Size = new System.Drawing.Size(167, 20);
+            this.dtpDataEnvio.Size = new System.Drawing.Size(168, 20);
             this.dtpDataEnvio.TabIndex = 170;
+            this.dtpDataEnvio.ValueChanged += new System.EventHandler(this.dtpDataEnvio_ValueChanged);
             // 
             // Envio
             // 
