@@ -71,8 +71,6 @@ namespace ProjetoCapeCode
 
             PRODUTOSTableAdapter produtos = new PRODUTOSTableAdapter();
             produtos.Update(produto.ID_Produto, produto.nome, produto.descricao, produto.valor, produto.quantidade, produto.tamanho, produto.cor,produto.ID_Fornecedor, produto.altura, produto.peso);
-            btnEditar.Text = "Cadastrar";
-            btnCadastro.Text = "Atulizar Lista";
             LimparElementos();
         }
 

@@ -28,8 +28,8 @@ namespace ProjetoCapeCode
                                 select linha).FirstOrDefault();
                 if (usuario == null)
                 {
-                   MessageBox.Show("O login esta errado ou não existe. \nVericar com o suporte");
-                   return; 
+                   // MessageBox.Show("O login esta errado ou não existe. \nVericar com o suporte");
+                   //return; 
                 }
                 saida = true;
                 Close();
