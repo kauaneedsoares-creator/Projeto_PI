@@ -34,7 +34,7 @@ namespace ProjetoCapeCode
 
         }
 
-        private void btnAjustess_Click(object sender, EventArgs e)
+        private void btnCadastro_Click(object sender, EventArgs e)
         {
 
             string nome = txtNomeProduto.Text;
@@ -43,10 +43,11 @@ namespace ProjetoCapeCode
             string tamanho = txtTamanho.Text;
             string cor = txtCor.Text;
             string descricao = txtDescricao.Text;
-            decimal altura = Convert.ToDecimal(txtAltura.Text);
+            int altura = Convert.ToInt32(txtAltura.Text);
             decimal peso = Convert.ToDecimal(txtPeso.Text);
+            int ID_Fornecedor = Convert.ToInt32(cboFornecedor.Text);
             PRODUTOSTableAdapter produtos = new PRODUTOSTableAdapter();
-            produtos.Insert(nome, descricao, valor, quantidade, tamanho, cor, altura,peso);
+            produtos.Insert(nome, descricao, valor, quantidade, tamanho, cor, altura,peso, ID_Fornecedor);
             LimparElementos();
             AtualizarLista();
 
@@ -55,7 +56,7 @@ namespace ProjetoCapeCode
 
         }
 
-        private void btnAcoes_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             PRODUTOSRow produto = lboProduto.SelectedItem as PRODUTOSRow;
             if (produto == null) return;
@@ -66,11 +67,12 @@ namespace ProjetoCapeCode
             produto.altura = Convert.ToDecimal(txtAltura.Text);
             produto.descricao = txtDescricao.Text;
             produto.peso = Convert.ToDecimal(txtPeso.Text);
+            produto.ID_Fornecedor = Convert.ToInt32(cboFornecedor);
 
             PRODUTOSTableAdapter produtos = new PRODUTOSTableAdapter();
-            produtos.Update(produto.ID_Produto, produto.nome, produto.descricao, produto.valor, produto.quantidade, produto.tamanho, produto.cor, produto.altura, produto.peso);
-            btnAcoes.Text = "Cadastrar";
-            btnAjustess.Text = "Atulizar Lista";
+            produtos.Update(produto.ID_Produto, produto.nome, produto.descricao, produto.valor, produto.quantidade, produto.tamanho, produto.cor,produto.ID_Fornecedor, produto.altura, produto.peso);
+            btnEditar.Text = "Cadastrar";
+            btnCadastro.Text = "Atulizar Lista";
             LimparElementos();
         }
 

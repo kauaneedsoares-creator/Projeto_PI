@@ -17,13 +17,18 @@ namespace ProjetoCapeCode
         public CdFuncionarios()
         {
             InitializeComponent();
+            FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
+            var obterfuncionarios = from linha in funcionarios.GetData()
+                        select linha;
+            foreach (var funcionario in obterfuncionarios) lboFuncionarios.Items.Add(funcionario);
+        }
+        private void AtualizarLista()
+        {
+            lboFuncionarios.Items.Clear();
             FUNCIONARIOSTableAdapter FuncionarioDados = new FUNCIONARIOSTableAdapter();
             var dados = from linha in FuncionarioDados.GetData()
                         select linha;
             foreach (FUNCIONARIOSRow dado in dados) lboFuncionarios.Items.Add(dado);
-        }
-        private void AtualizarLista()
-        {
 
         }
         private void LimparElementos()
@@ -34,7 +39,7 @@ namespace ProjetoCapeCode
             txtSenha.Text = "";
             cboCargo.Text = "";
             cboGenero.Text = "";
-            cxoAtivo.Text = " ";
+            cboStatus.Text = " ";
 
         }
 
@@ -47,9 +52,10 @@ namespace ProjetoCapeCode
             string senha = txtSenha.Text;
             string cargo = cboCargo.Text;
             string genero = cboGenero.Text;
-            string status_funcionario = cxoAtivo.Checked.ToString();
+            string status_funcionario = cboStatus.Text;
+                byte[] senhaBytes = System.Text.Encoding.UTF8.GetBytes(senha); ;
             FUNCIONARIOSTableAdapter funcionario = new FUNCIONARIOSTableAdapter();
-            funcionario.Insert(nome, email, senha, cpf, cargo, status_funcionario, genero); 
+            funcionario.Insert(nome, email, senhaBytes, cpf, cargo, status_funcionario, genero); 
             LimparElementos();
             AtualizarLista();
 
@@ -60,15 +66,16 @@ namespace ProjetoCapeCode
             FUNCIONARIOSRow funcionario = lboFuncionarios.SelectedItem as FUNCIONARIOSRow;
             if (funcionario == null) return;
             funcionario.nome = btnNomeFuncionario.Text;
-            funcionario.cpf = txtCPF.Text;
             funcionario.email = txtEmail.Text;
-            funcionario.senha = txtSenha.Text;
+            funcionario.cpf = txtCPF.Text;
             funcionario.cargo = cboCargo.Text;
-            funcionario.Genero = cboGenero.Text;
-            funcionario.status_funcionario = cxoAtivo.Checked.ToString();
+            funcionario.genero = cboGenero.Text;
+            funcionario.status_funcionario = cboStatus.Text;
+            byte[] senhaBytes = System.Text.Encoding.UTF8.GetBytes(txtSenha.Text); ;
+
 
             FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
-            funcionarios.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.cpf, funcionario.email, funcionario.senha, funcionario.cargo, funcionario.Genero, funcionario.status_funcionario);
+            funcionarios.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.email, funcionario.senha, funcionario.cpf, funcionario.cargo, funcionario.genero, funcionario.status_funcionario);
 
         }
 

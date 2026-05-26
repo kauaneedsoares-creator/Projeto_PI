@@ -42,14 +42,16 @@
             this.txtCor = new System.Windows.Forms.TextBox();
             this.txtTamanho = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.btnAcoes = new System.Windows.Forms.Button();
-            this.btnAjustess = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCadastro = new System.Windows.Forms.Button();
             this.bntLLimpar = new System.Windows.Forms.Button();
             this.lboProduto = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,32 +180,32 @@
             this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
             this.txtQuantidade.TabIndex = 15;
             // 
-            // btnAcoes
+            // btnEditar
             // 
-            this.btnAcoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcoes.ForeColor = System.Drawing.Color.White;
-            this.btnAcoes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAcoes.Location = new System.Drawing.Point(199, 471);
-            this.btnAcoes.Name = "btnAcoes";
-            this.btnAcoes.Size = new System.Drawing.Size(131, 44);
-            this.btnAcoes.TabIndex = 136;
-            this.btnAcoes.Text = "Editar";
-            this.btnAcoes.UseVisualStyleBackColor = false;
-            this.btnAcoes.Click += new System.EventHandler(this.btnAcoes_Click);
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.Location = new System.Drawing.Point(199, 471);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(131, 44);
+            this.btnEditar.TabIndex = 136;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnAjustess
+            // btnCadastro
             // 
-            this.btnAjustess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnAjustess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustess.ForeColor = System.Drawing.Color.White;
-            this.btnAjustess.Location = new System.Drawing.Point(40, 471);
-            this.btnAjustess.Name = "btnAjustess";
-            this.btnAjustess.Size = new System.Drawing.Size(131, 44);
-            this.btnAjustess.TabIndex = 135;
-            this.btnAjustess.Text = "Cadastro";
-            this.btnAjustess.UseVisualStyleBackColor = false;
-            this.btnAjustess.Click += new System.EventHandler(this.btnAjustess_Click);
+            this.btnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.ForeColor = System.Drawing.Color.White;
+            this.btnCadastro.Location = new System.Drawing.Point(40, 471);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(131, 44);
+            this.btnCadastro.TabIndex = 135;
+            this.btnCadastro.Text = "Cadastro";
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // bntLLimpar
             // 
@@ -260,18 +262,38 @@
             this.txtPeso.Size = new System.Drawing.Size(100, 20);
             this.txtPeso.TabIndex = 143;
             // 
+            // cboFornecedor
+            // 
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(367, 428);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(121, 21);
+            this.cboFornecedor.TabIndex = 148;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(364, 412);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 149;
+            this.label10.Text = "Fornecedor";
+            // 
             // CdProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cboFornecedor);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtAltura);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.lboProduto);
-            this.Controls.Add(this.btnAcoes);
-            this.Controls.Add(this.btnAjustess);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.bntLLimpar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -311,13 +333,15 @@
         private System.Windows.Forms.TextBox txtCor;
         private System.Windows.Forms.TextBox txtTamanho;
         private System.Windows.Forms.TextBox txtQuantidade;
-        private System.Windows.Forms.Button btnAcoes;
-        private System.Windows.Forms.Button btnAjustess;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button bntLLimpar;
         private System.Windows.Forms.ListBox lboProduto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.ComboBox cboFornecedor;
+        private System.Windows.Forms.Label label10;
     }
 }

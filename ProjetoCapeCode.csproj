@@ -98,9 +98,6 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Projeto_IntegradorDataSet.cs">
-      <DependentUpon>Projeto_IntegradorDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Projeto_IntegradorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

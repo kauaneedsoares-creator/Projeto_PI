@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoCapeCode.Projeto_IntegradorDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ProjetoCapeCode
 {
     public partial class Login : Form
     {
+        public bool saida;
         public Login()
         {
             InitializeComponent();
@@ -20,15 +22,16 @@ namespace ProjetoCapeCode
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             {
-                //verificarAcessoTableAdapter consuta = new verificarAcessoTableAdapter();
-                // var usuario = (from linha in consuta.GetData(txtEmail.Text, txtSenha.Text)
-                //                select linha).FirstOrDefault();
-              //  if (usuario == null)
+                byte[] senhaBytes = System.Text.Encoding.UTF8.GetBytes(txtSenha.Text);
+                VerificarAcessoTableAdapter consuta = new VerificarAcessoTableAdapter ();
+                var usuario = (from linha in consuta.GetData(txtEmail.Text, senhaBytes)
+                                select linha).FirstOrDefault();
+                if (usuario == null)
                 {
-                    //MessageBox.Show("O login esta errado ou não existe. \nVericar com o suporte");
-                    //return; 
+                   MessageBox.Show("O login esta errado ou não existe. \nVericar com o suporte");
+                   return; 
                 }
-               // saida = true;
+                saida = true;
                 Close();
             }
         }

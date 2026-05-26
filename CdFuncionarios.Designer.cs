@@ -43,11 +43,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cxoAtivo = new System.Windows.Forms.CheckBox();
             this.lboFuncionarios = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboGenero = new System.Windows.Forms.ComboBox();
             this.txtdata = new System.Windows.Forms.TextBox();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,19 +221,6 @@
             this.label2.TabIndex = 139;
             this.label2.Text = "Cargo";
             // 
-            // cxoAtivo
-            // 
-            this.cxoAtivo.AutoSize = true;
-            this.cxoAtivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cxoAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cxoAtivo.ForeColor = System.Drawing.Color.White;
-            this.cxoAtivo.Location = new System.Drawing.Point(25, 381);
-            this.cxoAtivo.Name = "cxoAtivo";
-            this.cxoAtivo.Size = new System.Drawing.Size(94, 35);
-            this.cxoAtivo.TabIndex = 140;
-            this.cxoAtivo.Text = "Ativo";
-            this.cxoAtivo.UseVisualStyleBackColor = true;
-            // 
             // lboFuncionarios
             // 
             this.lboFuncionarios.FormattingEnabled = true;
@@ -254,6 +242,9 @@
             // cboGenero
             // 
             this.cboGenero.FormattingEnabled = true;
+            this.cboGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
             this.cboGenero.Location = new System.Drawing.Point(24, 354);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(179, 21);
@@ -269,16 +260,38 @@
             this.txtdata.Size = new System.Drawing.Size(179, 17);
             this.txtdata.TabIndex = 145;
             // 
+            // cboStatus
+            // 
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.cboStatus.Location = new System.Drawing.Point(24, 405);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(179, 21);
+            this.cboStatus.TabIndex = 146;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(26, 389);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 147;
+            this.label4.Text = "Status";
+            // 
             // CdFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.txtdata);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboGenero);
             this.Controls.Add(this.lboFuncionarios);
-            this.Controls.Add(this.cxoAtivo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label1);
@@ -317,11 +330,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox cxoAtivo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox lboFuncionarios;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboGenero;
         private System.Windows.Forms.TextBox txtdata;
+        private System.Windows.Forms.ComboBox cboStatus;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -18,9 +18,9 @@ namespace ProjetoCapeCode
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Login entrado = new Login();
-            //entrado.saida = false;
+            entrado.saida = false;
             Application.Run(entrado);
-           // if (entrado.saida)
+            if (entrado.saida)
             {
                 entrado.Dispose();
                 entrado.Close();

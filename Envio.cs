@@ -75,40 +75,39 @@ namespace ProjetoCapeCode
 
         private void lboEnvio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Verifica se tem algo selecionado para evitar erro
-            if (lboEnvio.SelectedItem == null) return;
-
             try
             {
-                // 1. Pega a linha que foi selecionada no ListBox
-                var pedidoSelecionado = lboEnvio.SelectedItem as DetalhesParaEnvioRow;
+                // Pega a linha selecionada
+                PesquisaENVIORow pedidoSelecionado =
+                    lboEnvio.SelectedItem as PesquisaENVIORow;
 
-                // 2. Instancia o adaptador
-                DetalhesParaEnvioTableAdapter adaptadorDetalhes = new DetalhesParaEnvioTableAdapter();
+                if (pedidoSelecionado == null)
+                    return;
 
-                // 3. Executa a busca passando o ID da linha selecionada
-                var tabelaResultado = adaptadorDetalhes.GetData(pedidoSelecionado.ID_Pedido);
+                // Adaptador
+                PesquisaENVIOTableAdapter adaptador =
+                    new PesquisaENVIOTableAdapter();
+
+                // Busca os dados
+                var tabelaResultado =
+                    adaptador.GetData(txtPesquisa.Text);
 
                 if (tabelaResultado.Rows.Count > 0)
                 {
                     var linha = tabelaResultado[0];
 
-                    // 4. Preenche as caixas de texto
-                    lblNomeCliente.Text = linha.NomeCliente;
-                    lblEnderecoEntrega.Text = linha.EnderecoEntrega;
-                    lblProduto.Text = linha.NomeProduto;
-                    lblQuantidade.Text = linha.QuantidadeComprada.ToString();
-                    lblPeso.Text = linha.PesoTotalDesteItem.ToString();
-                    lblAltura.Text = linha.AlturaProduto.ToString();
+                    // Preenche labels
+                    lblNomeCliente.Text = linha.Cliente;
+                    lblProduto.Text = linha.transportadora;
+                    lblQuantidade.Text = linha.ID_Pedido.ToString();
+                    lblPeso.Text = linha.codigo_rastreio;
+                    lblAltura.Text = linha.status_envio;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar detalhes: " + ex.Message);
             }
-
-
-
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)

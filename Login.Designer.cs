@@ -47,7 +47,7 @@
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
             this.btnEntrar.Location = new System.Drawing.Point(359, 290);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(174, 25);
+            this.btnEntrar.Size = new System.Drawing.Size(174, 28);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -70,22 +70,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(354, 170);
+            this.label1.Location = new System.Drawing.Point(357, 175);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "E-mail";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(354, 221);
+            this.label2.Location = new System.Drawing.Point(357, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 25);
+            this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha";
             // 
@@ -105,7 +105,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(371, 98);
+            this.label3.Location = new System.Drawing.Point(374, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 25);
             this.label3.TabIndex = 6;
