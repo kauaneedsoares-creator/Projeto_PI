@@ -41,7 +41,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnVolta = new System.Windows.Forms.Button();
+            this.lboForncedor = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +80,7 @@
             this.btnEditar.TabIndex = 17;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // Limpar
             // 
@@ -90,6 +93,7 @@
             this.Limpar.TabIndex = 16;
             this.Limpar.Text = "Limpar";
             this.Limpar.UseVisualStyleBackColor = false;
+            this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
             // 
             // btnCadrastro
             // 
@@ -172,25 +176,40 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Endereço";
             // 
-            // btnVolta
+            // lboForncedor
             // 
-            this.btnVolta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnVolta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolta.ForeColor = System.Drawing.Color.White;
-            this.btnVolta.Location = new System.Drawing.Point(460, 78);
-            this.btnVolta.Name = "btnVolta";
-            this.btnVolta.Size = new System.Drawing.Size(78, 44);
-            this.btnVolta.TabIndex = 24;
-            this.btnVolta.Text = "Volta";
-            this.btnVolta.UseVisualStyleBackColor = false;
-            this.btnVolta.Click += new System.EventHandler(this.btnVolta_Click);
+            this.lboForncedor.FormattingEnabled = true;
+            this.lboForncedor.Location = new System.Drawing.Point(311, 91);
+            this.lboForncedor.Name = "lboForncedor";
+            this.lboForncedor.Size = new System.Drawing.Size(207, 264);
+            this.lboForncedor.TabIndex = 25;
+            this.lboForncedor.SelectedIndexChanged += new System.EventHandler(this.lboForncedor_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(21, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Endereço";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(24, 313);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 26;
             // 
             // CdFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
-            this.Controls.Add(this.btnVolta);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.lboForncedor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -227,6 +246,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnVolta;
+        private System.Windows.Forms.ListBox lboForncedor;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtTelefone;
     }
 }

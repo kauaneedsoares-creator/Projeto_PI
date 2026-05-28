@@ -27,11 +27,11 @@
             }
         }
 
-        partial class ENVIODataTable {
+        partial class ENVIODataTable
         {
             public override string ToString()
             {
-                return ID_EnvioColumn-.ToString();
+                return ID_EnvioColumn.ToString();
             }
         }
 

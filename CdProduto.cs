@@ -17,6 +17,15 @@ namespace ProjetoCapeCode
         public CdProduto()
         {
             InitializeComponent();
+            FORNECEDORESTableAdapter Fornecedor = new FORNECEDORESTableAdapter();
+            var obterFornecedor = from linha in Fornecedor.GetData()
+                              select linha;
+            foreach (var fornecedor in obterFornecedor) cboFornecedor.Items.Add(fornecedor);
+
+            PRODUTOSTableAdapter Produto= new PRODUTOSTableAdapter();
+            var obterPRODUTOS = from linha in Produto.GetData()
+                                  select linha;
+            foreach (var produto in obterPRODUTOS) cboFornecedor.Items.Add(Produto);
         }
         private void AtualizarLista()
         {
@@ -36,7 +45,6 @@ namespace ProjetoCapeCode
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-
             string nome = txtNomeProduto.Text;
             decimal valor = Convert.ToDecimal(txtValor.Text);
             int quantidade = Convert.ToInt32(txtQuantidade.Text);
@@ -45,15 +53,11 @@ namespace ProjetoCapeCode
             string descricao = txtDescricao.Text;
             int altura = Convert.ToInt32(txtAltura.Text);
             decimal peso = Convert.ToDecimal(txtPeso.Text);
-            int ID_Fornecedor = Convert.ToInt32(cboFornecedor.Text);
+            int ID_Fornecedor = Convert.ToInt32(cboFornecedor.SelectedValue);
             PRODUTOSTableAdapter produtos = new PRODUTOSTableAdapter();
             produtos.Insert(nome, descricao, valor, quantidade, tamanho, cor, altura,peso, ID_Fornecedor);
             LimparElementos();
             AtualizarLista();
-
-
-
-
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -80,5 +84,7 @@ namespace ProjetoCapeCode
             AtualizarLista();
             LimparElementos();
         }
+
+       
     }
 }

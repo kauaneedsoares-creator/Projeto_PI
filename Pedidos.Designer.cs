@@ -43,12 +43,16 @@
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lboPedidos = new System.Windows.Forms.ListBox();
-            this.btnVolta = new System.Windows.Forms.Button();
             this.btnCadatros = new System.Windows.Forms.Button();
             this.txtNumeroSerie = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboProtudos = new System.Windows.Forms.ComboBox();
             this.btnNumeroSeria = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtpdataPedido = new System.Windows.Forms.DateTimePicker();
+            this.txtQdt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +61,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(402, 293);
+            this.btnEditar.Location = new System.Drawing.Point(413, 104);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(134, 31);
             this.btnEditar.TabIndex = 15;
@@ -97,9 +101,9 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(359, 142);
+            this.txtPesquisa.Location = new System.Drawing.Point(435, 369);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(177, 20);
+            this.txtPesquisa.Size = new System.Drawing.Size(91, 20);
             this.txtPesquisa.TabIndex = 19;
             // 
             // label1
@@ -126,7 +130,7 @@
             // 
             this.lblProtudos.AutoSize = true;
             this.lblProtudos.ForeColor = System.Drawing.Color.White;
-            this.lblProtudos.Location = new System.Drawing.Point(26, 238);
+            this.lblProtudos.Location = new System.Drawing.Point(26, 285);
             this.lblProtudos.Name = "lblProtudos";
             this.lblProtudos.Size = new System.Drawing.Size(49, 13);
             this.lblProtudos.TabIndex = 23;
@@ -146,7 +150,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(356, 126);
+            this.label5.Location = new System.Drawing.Point(432, 353);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 25;
@@ -156,7 +160,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(30, 191);
+            this.label6.Location = new System.Drawing.Point(30, 238);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 26;
@@ -165,7 +169,7 @@
             // cboStatus
             // 
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(29, 207);
+            this.cboStatus.Location = new System.Drawing.Point(29, 254);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(100, 21);
             this.cboStatus.TabIndex = 27;
@@ -186,38 +190,27 @@
             // 
             this.lboPedidos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lboPedidos.FormattingEnabled = true;
-            this.lboPedidos.Location = new System.Drawing.Point(0, 369);
+            this.lboPedidos.Location = new System.Drawing.Point(0, 395);
             this.lboPedidos.Name = "lboPedidos";
-            this.lboPedidos.Size = new System.Drawing.Size(550, 147);
+            this.lboPedidos.Size = new System.Drawing.Size(550, 121);
             this.lboPedidos.TabIndex = 29;
-            // 
-            // btnVolta
-            // 
-            this.btnVolta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.btnVolta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolta.ForeColor = System.Drawing.Color.White;
-            this.btnVolta.Location = new System.Drawing.Point(438, 62);
-            this.btnVolta.Name = "btnVolta";
-            this.btnVolta.Size = new System.Drawing.Size(98, 44);
-            this.btnVolta.TabIndex = 30;
-            this.btnVolta.Text = "Volta";
-            this.btnVolta.UseVisualStyleBackColor = false;
             // 
             // btnCadatros
             // 
             this.btnCadatros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
             this.btnCadatros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadatros.ForeColor = System.Drawing.Color.White;
-            this.btnCadatros.Location = new System.Drawing.Point(402, 248);
+            this.btnCadatros.Location = new System.Drawing.Point(413, 59);
             this.btnCadatros.Name = "btnCadatros";
             this.btnCadatros.Size = new System.Drawing.Size(134, 31);
             this.btnCadatros.TabIndex = 31;
             this.btnCadatros.Text = "Cadatros";
             this.btnCadatros.UseVisualStyleBackColor = false;
+            this.btnCadatros.Click += new System.EventHandler(this.btnCadatros_Click);
             // 
             // txtNumeroSerie
             // 
-            this.txtNumeroSerie.Location = new System.Drawing.Point(29, 304);
+            this.txtNumeroSerie.Location = new System.Drawing.Point(29, 351);
             this.txtNumeroSerie.Name = "txtNumeroSerie";
             this.txtNumeroSerie.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroSerie.TabIndex = 32;
@@ -226,16 +219,16 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 288);
+            this.label7.Location = new System.Drawing.Point(26, 335);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(141, 13);
             this.label7.TabIndex = 33;
-            this.label7.Text = "Protudos";
+            this.label7.Text = "Numero de Serie do Produto";
             // 
             // cboProtudos
             // 
             this.cboProtudos.FormattingEnabled = true;
-            this.cboProtudos.Location = new System.Drawing.Point(29, 254);
+            this.cboProtudos.Location = new System.Drawing.Point(29, 301);
             this.cboProtudos.Name = "cboProtudos";
             this.cboProtudos.Size = new System.Drawing.Size(100, 21);
             this.cboProtudos.TabIndex = 34;
@@ -245,7 +238,7 @@
             this.btnNumeroSeria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
             this.btnNumeroSeria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNumeroSeria.ForeColor = System.Drawing.Color.White;
-            this.btnNumeroSeria.Location = new System.Drawing.Point(135, 304);
+            this.btnNumeroSeria.Location = new System.Drawing.Point(135, 351);
             this.btnNumeroSeria.Name = "btnNumeroSeria";
             this.btnNumeroSeria.Size = new System.Drawing.Size(133, 21);
             this.btnNumeroSeria.TabIndex = 35;
@@ -253,17 +246,62 @@
             this.btnNumeroSeria.UseVisualStyleBackColor = false;
             this.btnNumeroSeria.Click += new System.EventHandler(this.btnNumeroSeria_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(159, 289);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Quandidade";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(29, 215);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(26, 195);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Telefone";
+            // 
+            // dtpdataPedido
+            // 
+            this.dtpdataPedido.Location = new System.Drawing.Point(162, 62);
+            this.dtpdataPedido.Name = "dtpdataPedido";
+            this.dtpdataPedido.Size = new System.Drawing.Size(218, 20);
+            this.dtpdataPedido.TabIndex = 40;
+            // 
+            // txtQdt
+            // 
+            this.txtQdt.Location = new System.Drawing.Point(151, 302);
+            this.txtQdt.Name = "txtQdt";
+            this.txtQdt.Size = new System.Drawing.Size(100, 20);
+            this.txtQdt.TabIndex = 41;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.txtQdt);
+            this.Controls.Add(this.dtpdataPedido);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnNumeroSeria);
             this.Controls.Add(this.cboProtudos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNumeroSerie);
             this.Controls.Add(this.btnCadatros);
-            this.Controls.Add(this.btnVolta);
             this.Controls.Add(this.lboPedidos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboStatus);
@@ -303,11 +341,15 @@
         private System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lboPedidos;
-        private System.Windows.Forms.Button btnVolta;
         private System.Windows.Forms.Button btnCadatros;
         private System.Windows.Forms.TextBox txtNumeroSerie;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboProtudos;
         private System.Windows.Forms.Button btnNumeroSeria;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtpdataPedido;
+        private System.Windows.Forms.TextBox txtQdt;
     }
 }
