@@ -17,14 +17,17 @@ namespace ProjetoCapeCode
             InitializeComponent();
         }
 
-        private void btnVolta_Click(object sender, EventArgs e)
+      
+        private void btnNumeroSeria_Click(object sender, EventArgs e)
         {
-           
-        }
+            Random random = new Random();
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
+            string codigo =
+                "CAP-" +
+                DateTime.Now.Year + "-" +
+                random.Next(100000, 999999);
 
+            txtNumeroSerie.Text = codigo;
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtEndereço = new System.Windows.Forms.TextBox();
-            this.txtProtudos = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +44,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lboPedidos = new System.Windows.Forms.ListBox();
             this.btnVolta = new System.Windows.Forms.Button();
+            this.btnCadatros = new System.Windows.Forms.Button();
+            this.txtNumeroSerie = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboProtudos = new System.Windows.Forms.ComboBox();
+            this.btnNumeroSeria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,32 +63,24 @@
             this.btnEditar.TabIndex = 15;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtEndereço
             // 
-            this.txtEndereço.Location = new System.Drawing.Point(30, 229);
+            this.txtEndereço.Location = new System.Drawing.Point(29, 165);
             this.txtEndereço.Name = "txtEndereço";
             this.txtEndereço.Size = new System.Drawing.Size(100, 20);
             this.txtEndereço.TabIndex = 14;
             // 
-            // txtProtudos
-            // 
-            this.txtProtudos.Location = new System.Drawing.Point(30, 186);
-            this.txtProtudos.Name = "txtProtudos";
-            this.txtProtudos.Size = new System.Drawing.Size(100, 20);
-            this.txtProtudos.TabIndex = 13;
-            // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(30, 142);
+            this.txtCPF.Location = new System.Drawing.Point(29, 123);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 12;
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(30, 94);
+            this.txtCliente.Location = new System.Drawing.Point(29, 75);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCliente.TabIndex = 11;
@@ -110,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(27, 78);
+            this.label1.Location = new System.Drawing.Point(26, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 21;
@@ -120,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 126);
+            this.label2.Location = new System.Drawing.Point(26, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 22;
@@ -130,7 +126,7 @@
             // 
             this.lblProtudos.AutoSize = true;
             this.lblProtudos.ForeColor = System.Drawing.Color.White;
-            this.lblProtudos.Location = new System.Drawing.Point(27, 170);
+            this.lblProtudos.Location = new System.Drawing.Point(26, 238);
             this.lblProtudos.Name = "lblProtudos";
             this.lblProtudos.Size = new System.Drawing.Size(49, 13);
             this.lblProtudos.TabIndex = 23;
@@ -140,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 214);
+            this.label4.Location = new System.Drawing.Point(26, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 24;
@@ -160,7 +156,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(31, 255);
+            this.label6.Location = new System.Drawing.Point(30, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 26;
@@ -169,9 +165,9 @@
             // cboStatus
             // 
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(30, 271);
+            this.cboStatus.Location = new System.Drawing.Point(29, 207);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(121, 21);
+            this.cboStatus.Size = new System.Drawing.Size(100, 21);
             this.cboStatus.TabIndex = 27;
             // 
             // label3
@@ -190,9 +186,9 @@
             // 
             this.lboPedidos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lboPedidos.FormattingEnabled = true;
-            this.lboPedidos.Location = new System.Drawing.Point(0, 330);
+            this.lboPedidos.Location = new System.Drawing.Point(0, 369);
             this.lboPedidos.Name = "lboPedidos";
-            this.lboPedidos.Size = new System.Drawing.Size(550, 186);
+            this.lboPedidos.Size = new System.Drawing.Size(550, 147);
             this.lboPedidos.TabIndex = 29;
             // 
             // btnVolta
@@ -206,13 +202,67 @@
             this.btnVolta.TabIndex = 30;
             this.btnVolta.Text = "Volta";
             this.btnVolta.UseVisualStyleBackColor = false;
-            this.btnVolta.Click += new System.EventHandler(this.btnVolta_Click);
+            // 
+            // btnCadatros
+            // 
+            this.btnCadatros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnCadatros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadatros.ForeColor = System.Drawing.Color.White;
+            this.btnCadatros.Location = new System.Drawing.Point(402, 248);
+            this.btnCadatros.Name = "btnCadatros";
+            this.btnCadatros.Size = new System.Drawing.Size(134, 31);
+            this.btnCadatros.TabIndex = 31;
+            this.btnCadatros.Text = "Cadatros";
+            this.btnCadatros.UseVisualStyleBackColor = false;
+            // 
+            // txtNumeroSerie
+            // 
+            this.txtNumeroSerie.Location = new System.Drawing.Point(29, 304);
+            this.txtNumeroSerie.Name = "txtNumeroSerie";
+            this.txtNumeroSerie.Size = new System.Drawing.Size(100, 20);
+            this.txtNumeroSerie.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(26, 288);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Protudos";
+            // 
+            // cboProtudos
+            // 
+            this.cboProtudos.FormattingEnabled = true;
+            this.cboProtudos.Location = new System.Drawing.Point(29, 254);
+            this.cboProtudos.Name = "cboProtudos";
+            this.cboProtudos.Size = new System.Drawing.Size(100, 21);
+            this.cboProtudos.TabIndex = 34;
+            // 
+            // btnNumeroSeria
+            // 
+            this.btnNumeroSeria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnNumeroSeria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNumeroSeria.ForeColor = System.Drawing.Color.White;
+            this.btnNumeroSeria.Location = new System.Drawing.Point(135, 304);
+            this.btnNumeroSeria.Name = "btnNumeroSeria";
+            this.btnNumeroSeria.Size = new System.Drawing.Size(133, 21);
+            this.btnNumeroSeria.TabIndex = 35;
+            this.btnNumeroSeria.Text = "Numero Seria";
+            this.btnNumeroSeria.UseVisualStyleBackColor = false;
+            this.btnNumeroSeria.Click += new System.EventHandler(this.btnNumeroSeria_Click);
             // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.btnNumeroSeria);
+            this.Controls.Add(this.cboProtudos);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtNumeroSerie);
+            this.Controls.Add(this.btnCadatros);
             this.Controls.Add(this.btnVolta);
             this.Controls.Add(this.lboPedidos);
             this.Controls.Add(this.label3);
@@ -227,7 +277,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtEndereço);
-            this.Controls.Add(this.txtProtudos);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtCliente);
             this.Name = "Pedidos";
@@ -251,10 +300,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtProtudos;
         private System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lboPedidos;
         private System.Windows.Forms.Button btnVolta;
+        private System.Windows.Forms.Button btnCadatros;
+        private System.Windows.Forms.TextBox txtNumeroSerie;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboProtudos;
+        private System.Windows.Forms.Button btnNumeroSeria;
     }
 }

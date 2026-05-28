@@ -41,7 +41,7 @@ namespace ProjetoCapeCode
         {
             int ID_Pedido = Convert.ToInt32(lboIDPedido.Text);
             string transportadora = cboTransportadora.Text;
-            string codigo_rastreio = cboCodigoRastreio.Text;
+            string codigo_rastreio = txtCodigoRastreio.Text;
             DateTime data_envio = Convert.ToDateTime(dtpDataEnvio.Text);
             int ID_Funcionario = Convert.ToInt32(cboFuncionario.Text);
             string status_envio = cboStatus.Text;
@@ -56,7 +56,7 @@ namespace ProjetoCapeCode
             ENVIORow envio = lboEnvio.SelectedItem as ENVIORow;
             if (envio == null) return;
             envio.transportadora = cboTransportadora.Text;
-            envio.codigo_rastreio = cboCodigoRastreio.Text;
+            envio.codigo_rastreio = txtCodigoRastreio.Text;
             envio.ID_Funcionario = Convert.ToInt32(cboFuncionario.Text);
             envio.status_envio = cboStatus.Text;
 
@@ -110,14 +110,17 @@ namespace ProjetoCapeCode
             }
         }
 
-        private void txtPesquisa_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
 
-        private void dtpDataEnvio_ValueChanged(object sender, EventArgs e)
+        private void btnCodigoRastreio_Click(object sender, EventArgs e)
         {
+            Random random = new Random();
 
+            string codigo =
+                "BR" +
+                random.Next(100000, 999999).ToString() +
+                "SP";
+
+            txtCodigoRastreio.Text = codigo;
         }
     }
 }

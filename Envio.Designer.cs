@@ -31,7 +31,7 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.cboCodigoRastreio = new System.Windows.Forms.TextBox();
+            this.txtCodigoRastreio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +59,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lboIDPedido = new System.Windows.Forms.Label();
             this.dtpDataEnvio = new System.Windows.Forms.DateTimePicker();
+            this.btnCodigoRastreio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,12 +102,12 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // cboCodigoRastreio
+            // txtCodigoRastreio
             // 
-            this.cboCodigoRastreio.Location = new System.Drawing.Point(17, 345);
-            this.cboCodigoRastreio.Name = "cboCodigoRastreio";
-            this.cboCodigoRastreio.Size = new System.Drawing.Size(231, 20);
-            this.cboCodigoRastreio.TabIndex = 13;
+            this.txtCodigoRastreio.Location = new System.Drawing.Point(17, 345);
+            this.txtCodigoRastreio.Name = "txtCodigoRastreio";
+            this.txtCodigoRastreio.Size = new System.Drawing.Size(185, 20);
+            this.txtCodigoRastreio.TabIndex = 13;
             // 
             // label1
             // 
@@ -166,7 +167,7 @@
             this.cboFuncionario.FormattingEnabled = true;
             this.cboFuncionario.Location = new System.Drawing.Point(17, 388);
             this.cboFuncionario.Name = "cboFuncionario";
-            this.cboFuncionario.Size = new System.Drawing.Size(231, 21);
+            this.cboFuncionario.Size = new System.Drawing.Size(185, 21);
             this.cboFuncionario.TabIndex = 145;
             // 
             // cboTransportadora
@@ -174,7 +175,7 @@
             this.cboTransportadora.FormattingEnabled = true;
             this.cboTransportadora.Location = new System.Drawing.Point(17, 290);
             this.cboTransportadora.Name = "cboTransportadora";
-            this.cboTransportadora.Size = new System.Drawing.Size(231, 21);
+            this.cboTransportadora.Size = new System.Drawing.Size(185, 21);
             this.cboTransportadora.TabIndex = 147;
             // 
             // label7
@@ -196,7 +197,7 @@
             "Saída"});
             this.cboStatus.Location = new System.Drawing.Point(17, 437);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(231, 21);
+            this.cboStatus.Size = new System.Drawing.Size(185, 21);
             this.cboStatus.TabIndex = 149;
             // 
             // lboEnvio
@@ -214,7 +215,6 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(183, 20);
             this.txtPesquisa.TabIndex = 153;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label8
             // 
@@ -372,13 +372,26 @@
             this.dtpDataEnvio.Name = "dtpDataEnvio";
             this.dtpDataEnvio.Size = new System.Drawing.Size(168, 20);
             this.dtpDataEnvio.TabIndex = 170;
-            this.dtpDataEnvio.ValueChanged += new System.EventHandler(this.dtpDataEnvio_ValueChanged);
+            // 
+            // btnCodigoRastreio
+            // 
+            this.btnCodigoRastreio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.btnCodigoRastreio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCodigoRastreio.ForeColor = System.Drawing.Color.White;
+            this.btnCodigoRastreio.Location = new System.Drawing.Point(208, 344);
+            this.btnCodigoRastreio.Name = "btnCodigoRastreio";
+            this.btnCodigoRastreio.Size = new System.Drawing.Size(74, 21);
+            this.btnCodigoRastreio.TabIndex = 171;
+            this.btnCodigoRastreio.Text = "Codigo";
+            this.btnCodigoRastreio.UseVisualStyleBackColor = false;
+            this.btnCodigoRastreio.Click += new System.EventHandler(this.btnCodigoRastreio_Click);
             // 
             // Envio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.btnCodigoRastreio);
             this.Controls.Add(this.dtpDataEnvio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lboIDPedido);
@@ -409,7 +422,7 @@
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.cboCodigoRastreio);
+            this.Controls.Add(this.txtCodigoRastreio);
             this.Name = "Envio";
             this.Size = new System.Drawing.Size(564, 537);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -423,7 +436,7 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox cboCodigoRastreio;
+        private System.Windows.Forms.TextBox txtCodigoRastreio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
@@ -451,5 +464,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lboIDPedido;
         private System.Windows.Forms.DateTimePicker dtpDataEnvio;
+        private System.Windows.Forms.Button btnCodigoRastreio;
     }
 }
