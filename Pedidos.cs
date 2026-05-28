@@ -27,6 +27,9 @@ namespace ProjetoCapeCode
                               select linha;
             foreach (var produto in obterProduto) cboProtudos.Items.Add(produto);
 
+            cboProtudos.DisplayMember = "nome";      
+            cboProtudos.ValueMember = "ID_Produto"; 
+
 
         }
        private void  LimparElementos()
@@ -58,22 +61,32 @@ namespace ProjetoCapeCode
 
         private void btnCadatros_Click(object sender, EventArgs e)
         {
+            QueriesTableAdapter ta = new QueriesTableAdapter();
 
             try
             {
-                // Instancia a classe de queries do seu DataSet
-                var ta = new Projeto_IntegradorDataSetTableAdapters.QueriesTableAdapter();
+                // 2. Validação para evitar o erro de NullReferenceException
+                if (cboProtudos.SelectedValue == null)
+                {
+                    MessageBox.Show("Por favor, selecione um produto antes de cadastrar.");
+                    return;
+                }
 
-                // Executa a procedure passando os dados dos seus campos
+                // 3. Converter com segurança
+                int idProduto = Convert.ToInt32(cboProtudos.SelectedValue);
+                int quantidade = 0;
+                int.TryParse(txtQdt.Text, out quantidade); // Forma segura de converter
+
+                // 4. Executa a procedure
                 ta.sp_CadastrarPedidoCompleto(
                     txtCliente.Text,
                     txtCPF.Text,
                     txtTelefone.Text,
                     txtEndereço.Text,
                     cboStatus.Text,
-                    (int)cboProtudos.SelectedValue,
-                    int.Parse(txtQdt.Text),
-                    0.00m // Defina o valor unitário aqui
+                    idProduto,
+                    quantidade,
+                    0.00m
                 );
 
                 MessageBox.Show("Cadastro realizado com sucesso!");
@@ -89,38 +102,7 @@ namespace ProjetoCapeCode
 
         private void lboPedidos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PEDIDOSRow pedido = lboPedidos.SelectedItem as PEDIDOSRow;
 
-            if (pedido != null)
-            {
-                // 1. Acessar os campos do PEDIDO
-                cboStatus.Text = pedido.status_pedido;
-
-                // 2. Para buscar os dados do CLIENTE (relacionado ao pedido):
-                // Como o 'pedido' tem o ID_Cliente, precisamos buscar os dados do cliente
-                CLIENTESTableAdapter taClientes = new CLIENTESTableAdapter();
-                var listaClientes = taClientes.GetData();
-                var cliente = listaClientes.FirstOrDefault(c => c.ID_Cliente == pedido.ID_Cliente);
-
-                if (cliente != null)
-                {
-                    txtCliente.Text = cliente.nome;
-                    txtCPF.Text = cliente.cpf;
-                    txtTelefone.Text = cliente.telefone;
-                    txtEndereço.Text = cliente.endereco;
-                }
-
-                // 3. Para os itens (Produto e Quantidade)
-                // Isso assume que você tem uma forma de buscar o item do pedido
-                ITENS_PEDIDOTableAdapter taItens = new ITENS_PEDIDOTableAdapter();
-                var item = taItens.GetDataByPedido(pedido.ID_Pedido).FirstOrDefault();
-
-                if (item != null)
-                {
-                    cboProtudos.SelectedValue = item.ID_Produto;
-                    txtQdt.Text = item.quantidade.ToString();
-                }
-            }
         }
     }
 }

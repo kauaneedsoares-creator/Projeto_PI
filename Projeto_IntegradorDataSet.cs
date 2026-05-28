@@ -48,3 +48,10 @@ namespace ProjetoCapeCode
         }
     }
 }
+
+namespace ProjetoCapeCode.Projeto_IntegradorDataSetTableAdapters {
+    
+    
+    public partial class ITENS_PEDIDOTableAdapter {
+    }
+}
