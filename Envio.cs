@@ -18,10 +18,10 @@ namespace ProjetoCapeCode
         public Envio()
         {
             InitializeComponent();
-            PEDIDOSTableAdapter PedidoDados = new PEDIDOSTableAdapter();
-            var dados = from linha in PedidoDados.GetData()
-                        select linha;
-            foreach (PEDIDOSRow dado in dados) lboEnvio.Items.Add(dado);
+            PRODUTOSTableAdapter Produto = new PRODUTOSTableAdapter();
+            var obterPRODUTOS = from linha in Produto.GetData()
+                                select linha;
+            foreach (var produto in obterPRODUTOS) lboEnvio.Items.Add(Produto);
 
             FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter(); 
             var obterfuncionarios = from linha in funcionarios.GetData() select linha;

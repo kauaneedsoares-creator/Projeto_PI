@@ -76,7 +76,8 @@ namespace ProjetoCapeCode
 
             FUNCIONARIOSTableAdapter funcionarios = new FUNCIONARIOSTableAdapter();
             funcionarios.Update(funcionario.ID_Funcionario, funcionario.nome, funcionario.email, funcionario.senha, funcionario.cpf, funcionario.cargo, funcionario.genero, funcionario.status_funcionario);
-
+            LimparElementos();
+            AtualizarLista();
         }
 
         private void bntLimpar_Click(object sender, EventArgs e)
@@ -84,6 +85,18 @@ namespace ProjetoCapeCode
             lboFuncionarios.ClearSelected();
             AtualizarLista();
             LimparElementos();
+        }
+
+        private void lboFuncionarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FUNCIONARIOSRow funcionario = lboFuncionarios.SelectedItem as FUNCIONARIOSRow;
+            btnNomeFuncionario.Text = funcionario.nome;
+            txtCPF.Text = funcionario.cpf;
+            txtEmail.Text = funcionario.email;
+            cboCargo.Text = funcionario.cargo;
+            cboGenero.Text = funcionario.genero;
+            cboStatus.Text = funcionario.status_funcionario;
+
         }
     }
 }

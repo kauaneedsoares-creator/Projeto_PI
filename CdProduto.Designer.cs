@@ -44,7 +44,7 @@
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
-            this.bntLLimpar = new System.Windows.Forms.Button();
+            this.bntLimpar = new System.Windows.Forms.Button();
             this.lboProduto = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -207,18 +207,18 @@
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
-            // bntLLimpar
+            // bntLimpar
             // 
-            this.bntLLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
-            this.bntLLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntLLimpar.ForeColor = System.Drawing.Color.White;
-            this.bntLLimpar.Location = new System.Drawing.Point(367, 471);
-            this.bntLLimpar.Name = "bntLLimpar";
-            this.bntLLimpar.Size = new System.Drawing.Size(131, 44);
-            this.bntLLimpar.TabIndex = 134;
-            this.bntLLimpar.Text = "Limpar";
-            this.bntLLimpar.UseVisualStyleBackColor = false;
-            this.bntLLimpar.Click += new System.EventHandler(this.bntLLimpar_Click);
+            this.bntLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
+            this.bntLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntLimpar.ForeColor = System.Drawing.Color.White;
+            this.bntLimpar.Location = new System.Drawing.Point(367, 471);
+            this.bntLimpar.Name = "bntLimpar";
+            this.bntLimpar.Size = new System.Drawing.Size(131, 44);
+            this.bntLimpar.TabIndex = 134;
+            this.bntLimpar.Text = "Limpar";
+            this.bntLimpar.UseVisualStyleBackColor = false;
+            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
             // lboProduto
             // 
@@ -227,6 +227,7 @@
             this.lboProduto.Name = "lboProduto";
             this.lboProduto.Size = new System.Drawing.Size(232, 238);
             this.lboProduto.TabIndex = 142;
+            this.lboProduto.SelectedIndexChanged += new System.EventHandler(this.lboProduto_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -294,7 +295,7 @@
             this.Controls.Add(this.lboProduto);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.bntLLimpar);
+            this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -335,7 +336,7 @@
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCadastro;
-        private System.Windows.Forms.Button bntLLimpar;
+        private System.Windows.Forms.Button bntLimpar;
         private System.Windows.Forms.ListBox lboProduto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

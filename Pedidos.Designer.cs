@@ -130,7 +130,7 @@
             // 
             this.lblProtudos.AutoSize = true;
             this.lblProtudos.ForeColor = System.Drawing.Color.White;
-            this.lblProtudos.Location = new System.Drawing.Point(26, 285);
+            this.lblProtudos.Location = new System.Drawing.Point(26, 246);
             this.lblProtudos.Name = "lblProtudos";
             this.lblProtudos.Size = new System.Drawing.Size(49, 13);
             this.lblProtudos.TabIndex = 23;
@@ -160,7 +160,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(30, 238);
+            this.label6.Location = new System.Drawing.Point(30, 352);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 26;
@@ -169,7 +169,7 @@
             // cboStatus
             // 
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(29, 254);
+            this.cboStatus.Location = new System.Drawing.Point(29, 368);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(100, 21);
             this.cboStatus.TabIndex = 27;
@@ -194,6 +194,7 @@
             this.lboPedidos.Name = "lboPedidos";
             this.lboPedidos.Size = new System.Drawing.Size(550, 121);
             this.lboPedidos.TabIndex = 29;
+            this.lboPedidos.SelectedIndexChanged += new System.EventHandler(this.lboPedidos_SelectedIndexChanged);
             // 
             // btnCadatros
             // 
@@ -210,7 +211,7 @@
             // 
             // txtNumeroSerie
             // 
-            this.txtNumeroSerie.Location = new System.Drawing.Point(29, 351);
+            this.txtNumeroSerie.Location = new System.Drawing.Point(29, 312);
             this.txtNumeroSerie.Name = "txtNumeroSerie";
             this.txtNumeroSerie.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroSerie.TabIndex = 32;
@@ -219,7 +220,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 335);
+            this.label7.Location = new System.Drawing.Point(26, 296);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 13);
             this.label7.TabIndex = 33;
@@ -228,7 +229,7 @@
             // cboProtudos
             // 
             this.cboProtudos.FormattingEnabled = true;
-            this.cboProtudos.Location = new System.Drawing.Point(29, 301);
+            this.cboProtudos.Location = new System.Drawing.Point(29, 262);
             this.cboProtudos.Name = "cboProtudos";
             this.cboProtudos.Size = new System.Drawing.Size(100, 21);
             this.cboProtudos.TabIndex = 34;
@@ -238,7 +239,7 @@
             this.btnNumeroSeria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(24)))), ((int)(((byte)(80)))));
             this.btnNumeroSeria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNumeroSeria.ForeColor = System.Drawing.Color.White;
-            this.btnNumeroSeria.Location = new System.Drawing.Point(135, 351);
+            this.btnNumeroSeria.Location = new System.Drawing.Point(135, 312);
             this.btnNumeroSeria.Name = "btnNumeroSeria";
             this.btnNumeroSeria.Size = new System.Drawing.Size(133, 21);
             this.btnNumeroSeria.TabIndex = 35;
@@ -250,7 +251,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(159, 289);
+            this.label8.Location = new System.Drawing.Point(159, 250);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 37;
@@ -282,7 +283,7 @@
             // 
             // txtQdt
             // 
-            this.txtQdt.Location = new System.Drawing.Point(151, 302);
+            this.txtQdt.Location = new System.Drawing.Point(151, 263);
             this.txtQdt.Name = "txtQdt";
             this.txtQdt.Size = new System.Drawing.Size(100, 20);
             this.txtQdt.TabIndex = 41;

@@ -228,6 +228,7 @@
             this.lboFuncionarios.Name = "lboFuncionarios";
             this.lboFuncionarios.Size = new System.Drawing.Size(232, 264);
             this.lboFuncionarios.TabIndex = 141;
+            this.lboFuncionarios.SelectedIndexChanged += new System.EventHandler(this.lboFuncionarios_SelectedIndexChanged);
             // 
             // label3
             // 

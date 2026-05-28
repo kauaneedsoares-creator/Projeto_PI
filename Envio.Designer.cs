@@ -203,7 +203,7 @@
             // lboEnvio
             // 
             this.lboEnvio.FormattingEnabled = true;
-            this.lboEnvio.Location = new System.Drawing.Point(334, 152);
+            this.lboEnvio.Location = new System.Drawing.Point(334, 151);
             this.lboEnvio.Name = "lboEnvio";
             this.lboEnvio.Size = new System.Drawing.Size(210, 290);
             this.lboEnvio.TabIndex = 152;

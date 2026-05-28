@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProjetoCapeCode.Projeto_IntegradorDataSet;
 
 namespace ProjetoCapeCode
 {
@@ -30,10 +31,15 @@ namespace ProjetoCapeCode
         }
        private void  LimparElementos()
        {
-        
-       }
+
+        }
         private void AtualizarLista()
         {
+            lboPedidos.Items.Clear();
+            PEDIDOSTableAdapter dadospedidos = new PEDIDOSTableAdapter();
+            var dados = from linha in dadospedidos.GetData()
+                        select linha;
+            foreach (PEDIDOSRow dado in dados) lboPedidos.Items.Add(dado);
 
         }
 
@@ -79,6 +85,42 @@ namespace ProjetoCapeCode
                 MessageBox.Show("Erro ao cadastrar: " + ex.Message);
             }
 
+        }
+
+        private void lboPedidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PEDIDOSRow pedido = lboPedidos.SelectedItem as PEDIDOSRow;
+
+            if (pedido != null)
+            {
+                // 1. Acessar os campos do PEDIDO
+                cboStatus.Text = pedido.status_pedido;
+
+                // 2. Para buscar os dados do CLIENTE (relacionado ao pedido):
+                // Como o 'pedido' tem o ID_Cliente, precisamos buscar os dados do cliente
+                CLIENTESTableAdapter taClientes = new CLIENTESTableAdapter();
+                var listaClientes = taClientes.GetData();
+                var cliente = listaClientes.FirstOrDefault(c => c.ID_Cliente == pedido.ID_Cliente);
+
+                if (cliente != null)
+                {
+                    txtCliente.Text = cliente.nome;
+                    txtCPF.Text = cliente.cpf;
+                    txtTelefone.Text = cliente.telefone;
+                    txtEndereço.Text = cliente.endereco;
+                }
+
+                // 3. Para os itens (Produto e Quantidade)
+                // Isso assume que você tem uma forma de buscar o item do pedido
+                ITENS_PEDIDOTableAdapter taItens = new ITENS_PEDIDOTableAdapter();
+                var item = taItens.GetDataByPedido(pedido.ID_Pedido).FirstOrDefault();
+
+                if (item != null)
+                {
+                    cboProtudos.SelectedValue = item.ID_Produto;
+                    txtQdt.Text = item.quantidade.ToString();
+                }
+            }
         }
     }
 }

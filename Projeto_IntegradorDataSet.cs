@@ -1,4 +1,6 @@
-﻿namespace ProjetoCapeCode
+﻿using ProjetoCapeCode.Projeto_IntegradorDataSetTableAdapters;
+
+namespace ProjetoCapeCode
 {
 
 
@@ -35,8 +37,14 @@
             }
         }
 
-        partial class PRODUTOSDataTable
+        partial class PEDIDOSRow
         {
+            public override string ToString()
+            {
+
+
+                return ID_Pedido.ToString();
+            }
         }
     }
 }
